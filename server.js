@@ -1,16 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 const database = {
     users: [
         {
             id: '456',
             name: 'klau5',
-            email: 'klau5@gmail.com.com',
+            email: 'klau5@gmail.com',
             password: 'awesome',
             entries: 0,
             joined: new Date()
@@ -18,7 +20,7 @@ const database = {
         {
             id: '890',
             name: 'arya',
-            email: 'arya@gmail.com.com',
+            email: 'arya@gmail.com',
             password: 'thenorth',
             entries: 0,
             joined: new Date()
