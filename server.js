@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 app.post('/signin', (req, res) => {
     if (req.body.email === database.users[0].email &&
         req.body.password === database.users[0].password) {
-            res.json('Login Successfuul');
+            res.json(database.users[0]);
     } else {
         res.status(400).json('Error Logging In');
     }
